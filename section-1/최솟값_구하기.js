@@ -11,7 +11,10 @@
  */
 
 function solution(...numbers) {
-  return numbers.reduce((prev, cur) => (prev > cur ? cur : prev));
+  // 첫번째 답
+  return Math.min(...numbers);
+  // 두 번째 답
+  //   return numbers.reduce((prev, cur) => (prev > cur ? cur : prev));
 }
 
 console.log(solution(5, 3, 7, 11, 2, 15, 17));
