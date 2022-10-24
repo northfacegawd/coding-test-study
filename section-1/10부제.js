@@ -22,7 +22,8 @@
  */
 
 function solution(day, carNumbers) {
-  return carNumbers.filter((number) => (number - day) % 10 === 0).length;
+  // return carNumbers.filter((number) => (number - day) % 10 === 0).length;
+  return carNumbers.filter((number) => number % 10 === day).length;
 }
 
 console.log(solution(0, [12, 20, 54, 30, 87, 91, 30]));
