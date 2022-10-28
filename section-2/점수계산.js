@@ -25,8 +25,8 @@ function solution(arr) {
     before = 0;
   for (let i = 0; i < arr.length; i++) {
     if (arr[i]) {
-      answer += before + 1;
       before++;
+      answer += before;
     } else {
       before = 0;
     }
