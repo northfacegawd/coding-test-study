@@ -18,9 +18,12 @@
  */
 function solution(str) {
   let answer = "";
-  str.split("").forEach((s) => {
-    if (!isNaN(Number(s))) answer += s;
-  });
+  //   str.split("").forEach((s) => {
+  //     if (!isNaN(Number(s))) answer += s;
+  //   });
+  for (let s of str) {
+    if (!isNaN(s)) answer += x;
+  }
   return +answer;
 }
 
