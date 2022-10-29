@@ -17,13 +17,27 @@
 function solution(arr) {
   let answer,
     max = Number.MIN_SAFE_INTEGER;
+  // for (let x of arr) {
+  //   let sum = 0,
+  //     tmp = x;
+  //   while (tmp !== 0) {
+  //     sum += tmp % 10;
+  //     tmp = Math.floor(tmp / 10);
+  //   }
+  //   if (sum > max) {
+  //     max = sum;
+  //     answer = x;
+  //   }
+  //   if (sum === max && x > answer) {
+  //     answer = x;
+  //   }
+  // }
   for (let x of arr) {
-    let sum = 0,
-      tmp = x;
-    while (tmp !== 0) {
-      sum += tmp % 10;
-      tmp = Math.floor(tmp / 10);
-    }
+    let sum = x
+      .toString()
+      .split("")
+      .map((s) => +s)
+      .reduce((a, b) => a + b);
     if (sum > max) {
       max = sum;
       answer = x;
