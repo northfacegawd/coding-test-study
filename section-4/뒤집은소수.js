@@ -25,12 +25,13 @@ function isPrime(num) {
 function solution(arr) {
   let answer = [];
   for (let x of arr) {
-    let res = 0;
-    while (x !== 0) {
-      let t = x % 10;
-      res = res * 10 + t;
-      x = Number.parseInt(x / 10);
-    }
+    // let res = 0;
+    // while (x !== 0) {
+    //   let t = x % 10;
+    //   res = res * 10 + t;
+    //   x = Number.parseInt(x / 10);
+    // }
+    let res = +x.toString().split("").reverse().join("");
     if (isPrime(res)) answer.push(res);
   }
   return answer;
