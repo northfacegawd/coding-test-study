@@ -11,6 +11,7 @@ function solution(str) {
       stack.pop();
       // 레이저
       if (str[i - 1] === "(") answer += stack.length;
+      // 막대기 끝
       else answer += 1;
     }
   }
